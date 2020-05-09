@@ -1,0 +1,17 @@
+$welkOS = Get-Variable -name IS* #oefening is win,lin oder mac#
+
+foreach ($os in $welkOS){$os.name} # name #
+foreach ($bool in $welkOS){$bool.value} # value #
+switch($welkOS){
+    $os.name = "ISLinux" && $os.value = "True" {write-host "Linux omgeving = True"
+    write-host "MacOs omgeving = False"
+    write-host "Windows omgeving = False";break}
+
+    $os.name = "ISMacOs" && $os.value = "True" {write-host "Linux omgeving = False"
+    write-host "MacOs omgeving = True"
+    write-host "Windows omgeving = False";break}
+    
+    $os.name = "IsWindows" && $os.value = "True" {write-host "Linux omgeving = False"
+    write-host "MacOs omgeving = False"
+    write-host "Windows omgeving = True";break}
+}
